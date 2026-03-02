@@ -76,21 +76,46 @@ nav a:hover {
 /* HERO */
 
 .hero {
-    background: var(--azul);
-    color: white;
+    background: var(--blanco);
+    padding: 180px 10% 120px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-box {
+    background: 
+        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+        url("/static/img/hero-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 60px;
+    border-radius: 12px;
+    max-width: 900px;
     text-align: center;
-    padding: 160px 10% 120px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.05);
 }
 
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
+    font-size: 48px;
+    color: var(--azul);
+    margin-bottom: 20px;
+    font-weight: 800;
 }
 
 .hero h2 {
-    font-size: 22px;
-    margin-bottom: 20px;
-    color: #dcdcdc;
+    font-size: 24px;
+    color: var(--gris);
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.hero-btn {
+    margin-top: 20px;
 }
 
 /* STATS */
@@ -137,21 +162,28 @@ nav a:hover {
 /* CLIENTES */
 
 .clientes {
-    background: var(--gris-claro);
+    background: var(--azul);
+    color: white;
     text-align: center;
+}
+
+.clientes .section-title {
+    color: white;
 }
 
 .clientes-logos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .logo-box {
     background: white;
-    padding: 20px;
-    border-radius: 6px;
+    padding: 30px;
+    border-radius: 8px;
+    color: var(--azul);
+    font-weight: bold;
 }
 
 /* PROYECTOS */
@@ -190,6 +222,15 @@ nav a:hover {
     text-align: center;
 }
 
+.contacto .section-title {
+    color: white;
+}
+
+.contacto-info {
+    margin: 30px 0;
+    line-height: 2;
+}
+
 /* FOOTER */
 
 footer {
@@ -199,4 +240,86 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+
+
+
+
+.section-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 36px;
+    color: var(--azul);
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    color: var(--gris);
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.stats {
+    background: var(--gris-claro);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    background: var(--azul);
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.stat-box h3 {
+    font-size: 32px;
+    color: var(--naranja);
+    margin-bottom: 10px;
+}
+
+.stats-extra {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#galeria {
+    background: var(--blanco);
+}
+
+.proyecto-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    border-top: 5px solid var(--naranja);
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.05);
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.beneficio-item {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
 }
