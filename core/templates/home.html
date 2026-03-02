@@ -1,9 +1,224 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Constructora</title>
+    <meta charset="UTF-8">
+    <title>R&G Construcciones Ltda.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --azul: #003366;
+            --naranja: #E67E22;
+            --gris: #4D4D4D;
+            --gris-claro: #F4F6F9;
+            --blanco: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-color: var(--gris-claro);
+            color: var(--gris);
+            line-height: 1.6;
+        }
+
+        section {
+            padding: 60px 10%;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--naranja);
+            color: var(--blanco);
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            opacity: 0.85;
+        }
+
+        /* HERO */
+        .hero {
+            background-color: var(--azul);
+            color: var(--blanco);
+            text-align: center;
+            padding: 100px 10%;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero p {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        /* SOBRE */
+        .sobre {
+            background: var(--blanco);
+        }
+
+        /* ESTADISTICAS */
+        .stats {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            background-color: var(--azul);
+            color: var(--blanco);
+        }
+
+        .stat-box {
+            flex: 1;
+        }
+
+        .stat-box h2 {
+            color: var(--naranja);
+        }
+
+        /* SERVICIOS */
+        .servicios {
+            background: var(--blanco);
+        }
+
+        .servicio-item {
+            margin-bottom: 20px;
+        }
+
+        /* CLIENTES */
+        .clientes {
+            background-color: var(--gris-claro);
+        }
+
+        /* GALERIA */
+        .galeria {
+            background-color: var(--blanco);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .galeria div {
+            background: var(--gris);
+            height: 180px;
+        }
+
+        /* CONTACTO */
+        .contacto {
+            background-color: var(--azul);
+            color: var(--blanco);
+            text-align: center;
+        }
+
+        footer {
+            background-color: var(--gris);
+            color: var(--blanco);
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Bienvenido a mi empresa constructora</h1>
+
+    <!-- HERO -->
+    <section class="hero">
+        <h1>R&G Construcciones Ltda.</h1>
+        <p>30 años construyendo confianza y calidad en obras menores en Chile</p>
+        <a href="#contacto" class="btn">Solicitar Cotización</a>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="sobre">
+        <h2>Sobre Nosotros</h2>
+        <p>
+            Somos una empresa con más de 30 años de experiencia en el rubro de la construcción,
+            especializados en obras menores, remodelaciones, proyectos habitacionales,
+            locales comerciales y oficinas.
+        </p>
+        <p>
+            Hemos trabajado en proyectos para empresas como Oxxo, Bupa, centros comerciales y bancos,
+            demostrando calidad, responsabilidad y cumplimiento.
+        </p>
+    </section>
+
+    <!-- ESTADISTICAS -->
+    <section class="stats">
+        <div class="stat-box">
+            <h2>30+</h2>
+            <p>Años de Experiencia</p>
+        </div>
+        <div class="stat-box">
+            <h2>100+</h2>
+            <p>Proyectos Ejecutados</p>
+        </div>
+        <div class="stat-box">
+            <h2>100%</h2>
+            <p>Compromiso y Calidad</p>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="servicios">
+        <h2>Servicios</h2>
+
+        <div class="servicio-item">
+            <h3>Construcción Completa</h3>
+            <p>Desarrollo integral de proyectos habitacionales y comerciales.</p>
+        </div>
+
+        <div class="servicio-item">
+            <h3>Remodelaciones</h3>
+            <p>Modernización y adecuación de espacios existentes.</p>
+        </div>
+
+        <div class="servicio-item">
+            <h3>Obras Menores</h3>
+            <p>Soluciones constructivas eficientes y profesionales.</p>
+        </div>
+    </section>
+
+    <!-- CLIENTES -->
+    <section class="clientes">
+        <h2>Clientes con los que hemos trabajado</h2>
+        <p>Oxxo | Bupa | Centros Comerciales | Bancos | Empresas privadas</p>
+    </section>
+
+    <!-- GALERIA -->
+    <section>
+        <h2>Proyectos Realizados</h2>
+        <div class="galeria">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+        <h2>Contacto</h2>
+        <p>Email: contacto@rgconstrucciones.cl</p>
+        <p>Teléfono: +56 9 XXXX XXXX</p>
+        <br>
+        <a class="btn" href="mailto:contacto@rgconstrucciones.cl">Enviar Correo</a>
+    </section>
+
+    <footer>
+        © 2026 R&G Construcciones Ltda. - Todos los derechos reservados
+    </footer>
+
 </body>
 </html>
