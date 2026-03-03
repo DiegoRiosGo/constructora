@@ -222,6 +222,7 @@ nav a:hover {
     border-radius: 8px;
     color: var(--azul);
     font-weight: bold;
+    border-left: 5px solid var(--naranja);
 }
 
 /* PROYECTOS */
@@ -236,6 +237,7 @@ nav a:hover {
     background: white;
     padding: 25px;
     border-radius: 8px;
+    border-top: 4px solid var(--naranja);
 }
 
 /* POR QUE */
@@ -283,6 +285,7 @@ nav a:hover {
     padding: 50px;
     border-radius: 12px;
     box-shadow: 0px 15px 30px rgba(0,0,0,0.08);
+    border-left: 5px solid var(--naranja);
 }
 
 .contacto-info h2 {
@@ -378,7 +381,7 @@ nav a:hover {
 
 .stats {
     background: var(--azul);
-    padding: 70px 10%;
+    padding: 15px 10%;
 }
 
 .stats-grid {
