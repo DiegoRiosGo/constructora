@@ -201,6 +201,34 @@ nav a:hover {
     gap: 30px;
 }
 
+/* GRID 3x3 para servicio destacado */
+
+.servicio-destacado ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 20px;
+}
+
+.servicio-destacado ul li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 14px;
+}
+
+/* pequeño punto elegante */
+
+.servicio-destacado ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--naranja);
+    font-weight: bold;
+}
+
 /* CLIENTES */
 
 .clientes {
@@ -238,6 +266,13 @@ nav a:hover {
     padding: 25px;
     border-radius: 8px;
     border-top: 4px solid var(--naranja);
+    transition: all 0.35s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.proyecto-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
 }
 
 /* POR QUE */
@@ -474,7 +509,20 @@ nav a:hover {
 }
 
 #galeria {
-    background: var(--gris-claro);
-    border-top: 6px solid var(--naranja);
-    padding-top: 120px;
+    background: linear-gradient(to bottom, #f4f6f9 0%, #ffffff 100%);
+    padding-top: 140px;
+    margin-top: -40px;
+}
+
+/* Animación base */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
