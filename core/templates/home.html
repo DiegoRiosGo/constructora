@@ -41,17 +41,45 @@
         </div>
     </section>
 
-    <!-- SOBRE LA EMPRESA -->
     <section class="sobre" id="sobre">
-        <div class="section-container">
-            <h2 class="section-title">Sobre Nosotros</h2>
-            <h3 class="section-subtitle">Construcción con trayectoria, profesionalismo y respaldo.</h3>
+        <div class="sobre-grid">
 
-            <p>R&G Construcciones Ltda. es una empresa chilena con más de 30 años de trayectoria liderando proyectos de construcción y remodelación.</p>
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="sobre-contenido">
 
-            <p>Nuestro equipo está formado por expertos en obras menores, locales comerciales, oficinas y proyectos habitacionales, garantizando resultados que respetan plazos, calidad técnica y satisfacción del cliente.</p>
+                <h2 class="section-title">Sobre Nosotros</h2>
+                <h3 class="section-subtitle">Construcción con trayectoria, profesionalismo y respaldo.</h3>
 
-            <p>A lo largo de nuestra historia hemos ejecutado trabajos para importantes marcas y empresas, lo que respalda nuestra experiencia en terreno.</p>
+                <p>R&G Construcciones Ltda. es una empresa chilena con más de 30 años de trayectoria liderando proyectos de construcción y remodelación.</p>
+
+                <p>Nuestro equipo está formado por expertos en obras civiles, locales comerciales, oficinas y proyectos habitacionales, garantizando resultados que respetan plazos, calidad técnica y satisfacción del cliente.</p>
+
+                <!-- OBJETIVO -->
+                <h3 class="mini-title">Objetivo Principal</h3>
+                <p class="mini-text">
+                    Ejecutar proyectos constructivos con excelencia técnica, responsabilidad y compromiso real con cada cliente.
+                </p>
+
+                <!-- MISION Y VISION -->
+                <div class="mision-vision">
+                    <div>
+                        <h4>Misión</h4>
+                        <p>Desarrollar soluciones constructivas eficientes y seguras, asegurando calidad, cumplimiento y confianza.</p>
+                    </div>
+
+                    <div>
+                        <h4>Visión</h4>
+                        <p>Ser una empresa referente en ejecución técnica y obras civiles a nivel nacional.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COLUMNA DERECHA (IMAGEN) -->
+            <div class="sobre-img">
+                <img src="{% static 'img/sobre.jpg' %}" alt="Equipo R&G Construcciones">
+            </div>
+
         </div>
     </section>
 
@@ -90,58 +118,70 @@
 
     <!-- SERVICIOS -->
     <section id="servicios">
-    <h2>Servicios</h2>
-    <div class="servicios-grid">
-    
-    <div class="servicio-card">
-    <h3>Construcción de Obras</h3>
-    <p>Ejecución integral desde obra gruesa hasta terminaciones.</p>
-    <ul>
-    <li>Fundaciones</li>
-    <li>Estructuras</li>
-    <li>Terminaciones</li>
-    </ul>
-    </div>
-    
-    <div class="servicio-card">
-    <h3>Remodelaciones</h3>
-    <p>Transformación y modernización de espacios.</p>
-    <ul>
-    <li>Locales comerciales</li>
-    <li>Oficinas</li>
-    <li>Viviendas</li>
-    </ul>
-    </div>
-    
-    <div class="servicio-card">
-    <h3>Adecuaciones Corporativas</h3>
-    <p>Implementación técnica para marcas y empresas.</p>
-    <ul>
-    <li>Montaje técnico</li>
-    <li>Instalaciones eléctricas</li>
-    <li>Instalaciones sanitarias</li>
-    </ul>
-    </div>
-    
-    </div>
+        <div class="servicios-wrapper">
+
+            <h2 class="section-title">Servicios</h2>
+
+            <div class="servicios-grid">
+
+                <!-- OBRAS CIVILES -->
+                <div class="servicio-card">
+                    <h3>Construcción Obras Civiles</h3>
+                    <ul>
+                        <li>Tabiquería</li>
+                        <li>Pintura</li>
+                        <li>Pisos</li>
+                        <li>Aire acondicionado</li>
+                        <li>Muebles</li>
+                        <li>Electricidad</li>
+                        <li>Gasfitería</li>
+                        <li>Cotizaciones y presupuestos</li>
+                        <li>Gestión y planificación</li>
+                    </ul>
+                </div>
+
+                <!-- REMODELACIONES -->
+                <div class="servicio-card">
+                    <h3>Remodelaciones</h3>
+                    <p>Transformación y modernización de espacios comerciales, oficinas y viviendas.</p>
+                </div>
+
+                <!-- SUPERVISION -->
+                <div class="servicio-card">
+                    <h3>Coordinación y Supervisión de Obra</h3>
+                    <p>Gestión de procesos, planificación y liderazgo técnico para que tu proyecto se ejecute sin sorpresas.</p>
+                </div>
+
+                <!-- MANTENIMIENTO -->
+                <div class="servicio-card">
+                    <h3>Mantenimiento y Mejoras Técnicas</h3>
+                    <p>Obras menores, reparación estructural, instalaciones y ajustes funcionales.</p>
+                </div>
+
+            </div>
+        </div>
     </section>
 
     <!-- CLIENTES IMPORTANTES -->
     <section class="clientes" id="clientes">
-    <h2>Empresas que han confiado en nosotros</h2>
-    <p>Participación en ejecución técnica y constructiva de proyectos para:</p>
-    
-    <div class="clientes-logos">
-    <div class="logo-box">OXXO</div>
-    <div class="logo-box">BUPA</div>
-    <div class="logo-box">Centros Comerciales</div>
-    <div class="logo-box">Entidades Bancarias</div>
-    </div>
+        <h2 class="section-title">Empresas que han confiado en nosotros</h2>
+
+        <div class="clientes-logos">
+            <div class="logo-box">Oxxo</div>
+            <div class="logo-box">Bupa</div>
+            <div class="logo-box">BCI</div>
+            <div class="logo-box">Banco de Chile</div>
+            <div class="logo-box">Casa Habitación</div>
+            <div class="logo-box">Araucana</div>
+            <div class="logo-box">Puma</div>
+            <div class="logo-box">Nike</div>
+            <div class="logo-box">IO</div>
+        </div>
     </section>
 
     <!-- GALERÍA DE PROYECTOS -->
     <section id="galeria">
-    <h2>Proyectos Destacados</h2>
+    <h2 class="section-title">Proyectos Destacados</h2>
     
     <div class="proyectos-grid">
     
@@ -158,6 +198,8 @@
     </section>
 
     <!-- POR QUÉ ELEGIRNOS -->
+    <h2 class="section-title">Proyectos Destacados</h2>
+
     <div class="beneficios">
         <div class="beneficio-item">
             <strong>Experiencia consolidada</strong>
@@ -182,16 +224,27 @@
 
     <!-- CONTACTO -->
     <section class="contacto" id="contacto">
-        <h2>Contacto</h2>
-        <h3>Conversemos sobre tu proyecto</h3>
-        <p>¿Tienes una idea, un diseño o un proyecto a desarrollar? Estamos listos para escucharte, presupuestar y ejecutar con la máxima responsabilidad y calidad.</p>
-        <p>Contáctanos para una cotización sin compromiso:</p>
-        <div class="contacto-info">
-            <p>Email: contacto@rgconstrucciones.cl</p>
-            <p>Teléfono: +56 9 XXXX XXXX</p>
+        <div class="contacto-grid">
+
+            <div class="contacto-info">
+                <h2 class="section-title">Contacto</h2>
+                <h3 class="section-subtitle">Conversemos sobre tu proyecto</h3>
+
+                <p>Estamos listos para escucharte, presupuestar y ejecutar con responsabilidad y calidad.</p>
+
+                <div class="contacto-datos">
+                    <p><strong>Email:</strong> contacto@rgconstrucciones.cl</p>
+                    <p><strong>Teléfono:</strong> +56 9 XXXX XXXX</p>
+                </div>
+
+                <a class="btn" href="mailto:contacto@rgconstrucciones.cl">Enviar Correo</a>
+            </div>
+
+            <div class="contacto-img">
+                <img src="{% static 'img/contacto.jpg' %}" alt="Contacto R&G">
+            </div>
+
         </div>
-        <br>
-        <a class="btn" href="mailto:contacto@rgconstrucciones.cl">Enviar Correo</a>
     </section>
 
     <!-- FOOTER -->
