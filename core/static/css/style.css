@@ -139,10 +139,6 @@ nav a:hover {
     color: var(--naranja);
 }
 
-.stat-box p {
-    color: white;
-}
-
 /* SERVICIOS */
 
 #servicios {
@@ -189,16 +185,28 @@ nav a:hover {
     margin-bottom: 6px;
 }
 
+.servicios-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.servicio-destacado {
+    width: 100%;
+}
+
+.servicios-secundarios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
 /* CLIENTES */
 
 .clientes {
     background: var(--gris-claro);
     text-align: center;
     padding: 120px 10%;
-}
-
-.clientes .section-title {
-    color: white;
 }
 
 .clientes-logos {
@@ -388,15 +396,21 @@ nav a:hover {
 }
 
 .stat-box h3 {
-    font-size: 26px;
-    color: var(--azul);
-    margin-bottom: 5px;
+    font-size: 28px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 800;
 }
 
 .stat-box p {
     font-size: 14px;
     font-weight: 600;
-    color: #1f1f1f;
+    color: white;
+}
+
+/* Cuando el título esté sobre fondo azul */
+.stats .section-title {
+    color: white;
 }
 
 .stats-extra {
@@ -444,7 +458,7 @@ nav a:hover {
 
 .objetivo-title {
     text-align: center;
-    color: var(--naranja);
+    color: var(--azul);
     font-size: 24px;
     font-weight: 700;
     margin: 40px 0 15px;
@@ -453,4 +467,11 @@ nav a:hover {
 .mision-vision h4 {
     color: var(--naranja);
     font-weight: 700;
+    margin-bottom: 8px;
+}
+
+#galeria {
+    background: var(--gris-claro);
+    border-top: 6px solid var(--naranja);
+    padding-top: 120px;
 }
