@@ -261,9 +261,18 @@ nav a:hover {
     background: white;
     padding: 30px;
     border-radius: 8px;
-    color: var(--azul);
-    font-weight: bold;
     border-left: 5px solid var(--naranja);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px; /* Altura fija uniforme */
+}
+
+.logo-box img {
+    max-height: 60px; /* Todas las imágenes mismas proporciones */
+    max-width: 100%;
+    object-fit: contain;
 }
 
 /* PROYECTOS */
@@ -530,20 +539,6 @@ nav a:hover {
 
 #galeria {
     background: var(--gris-claro);
-    position: relative;
-    padding-top: 100px;
-}
-
-/* Separador visual superior */
-
-#galeria::before {
-    content: "";
-    position: absolute;
-    top: 60px;
-    left: 10%;
-    width: 80%;
-    height: 3px;
-    background: linear-gradient(to right, transparent, var(--naranja), transparent);
 }
 
 /* Animación base */
@@ -557,4 +552,21 @@ nav a:hover {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* SEPARADOR SUPERIOR REUTILIZABLE */
+
+.seccion-separador {
+    position: relative;
+    padding-top: 100px;
+}
+
+.seccion-separador::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, var(--naranja), transparent);
 }
