@@ -117,7 +117,10 @@
     </section>
 
     <!-- SERVICIOS -->
-    <section id="servicios">
+    <section id="servicios" class="fade-in">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <p class="section-subtitle">Soluciones constructivas integrales para proyectos habitacionales y comerciales.</p>
+        
         <div class="servicios-layout">
 
         <!-- SERVICIO PRINCIPAL -->
@@ -160,7 +163,7 @@
     </section>
 
     <!-- CLIENTES IMPORTANTES -->
-    <section class="clientes" id="clientes">
+    <section class="clientes fade-in" id="clientes">
         <h2 class="section-title">Empresas que han confiado en nosotros</h2>
 
         <div class="clientes-logos">
@@ -177,7 +180,7 @@
     </section>
 
     <!-- GALERÍA DE PROYECTOS -->
-    <section id="galeria">
+    <section id="galeria" class="fade-in">
     <h2 class="section-title">Proyectos Destacados</h2>
     
     <div class="proyectos-grid">
@@ -222,7 +225,7 @@
     </section>
 
     <!-- POR QUÉ ELEGIRNOS -->
-    <section id="por-que">
+    <section id="por-que" class="fade-in">
         <h2 class="section-title">¿Por qué elegir R&G Construcciones?</h2>
 
         <div class="beneficios-grid">
@@ -306,6 +309,29 @@
             © 2026 R&G Construcciones Ltda. - Todos los derechos reservados
         </div>
     </footer>
+    
 
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        
+        const appearOptions = {
+            threshold: 0.2
+        };
+        
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+        
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
 </body>
 </html>
