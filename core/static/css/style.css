@@ -37,7 +37,7 @@ body {
 }
 
 section {
-    padding: 100px 10%;
+    padding: 70px 10%;
 }
 
 h2 {
@@ -94,7 +94,7 @@ nav a:hover {
 
 .hero {
     background: var(--blanco);
-    padding: 180px 10% 120px;
+    padding: 120px 10% 120px;
     display: flex;
     justify-content: center;
 }
@@ -160,7 +160,7 @@ nav a:hover {
 
 #servicios {
     background: white;
-    padding: 120px 10%;
+    padding: 70px 10%;
 }
 
 .servicios-wrapper {
@@ -178,7 +178,7 @@ nav a:hover {
 
 .servicio-card {
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-top: 4px solid var(--naranja);
 }
 
@@ -219,12 +219,11 @@ nav a:hover {
 
 .servicio-destacado ul {
     list-style: none;
-    padding: 0;
     margin-top: 20px;
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px 20px;
+    gap: 6px 20px;
 }
 
 .servicio-destacado ul li {
@@ -248,7 +247,7 @@ nav a:hover {
 .clientes {
     background: var(--gris-claro);
     text-align: center;
-    padding: 120px 10%;
+    padding: 70px 10%;
 }
 
 .clientes-logos {
@@ -293,7 +292,7 @@ nav a:hover {
 
 #por-que {
     background: white;
-    padding: 120px 10%;
+    padding: 70px 10%;
 }
 
 .beneficios-grid {
@@ -319,7 +318,7 @@ nav a:hover {
 
 .contacto {
     background: var(--azul);
-    padding: 120px 10%;
+    padding: 70px 10%;
 }
 
 .contacto-grid {
@@ -362,7 +361,7 @@ nav a:hover {
 .footer {
     background: #1c1c1c;
     color: white;
-    padding: 80px 10% 30px;
+    padding: 50px 5% 30px;
 }
 
 .footer-grid {
@@ -412,7 +411,7 @@ nav a:hover {
 .section-title {
     font-size: 36px;
     color: var(--azul);
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     font-weight: 700;
     text-align: center;
 }
@@ -442,7 +441,7 @@ nav a:hover {
 
 .stat-box {
     background: var(--naranja);
-    padding: 25px 15px;
+    padding: 15px 15px;
     border-radius: 8px;
     text-align: center;
 }
@@ -491,7 +490,7 @@ nav a:hover {
 
 .sobre-card {
     background: white;
-    padding: 35px;
+    padding: 25px;
     margin-top: 30px;
     border-left: 5px solid var(--naranja);
 }
@@ -520,7 +519,7 @@ nav a:hover {
     color: var(--azul);
     font-size: 24px;
     font-weight: 700;
-    margin: 40px 0 15px;
+    margin: 10px 0 10px;
 }
 
 .mision-vision h4 {
@@ -532,7 +531,7 @@ nav a:hover {
 #galeria {
     background: var(--gris-claro);
     position: relative;
-    padding-top: 160px;
+    padding-top: 100px;
 }
 
 /* Separador visual superior */
