@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- CSS externo -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
@@ -17,7 +18,9 @@
     <header>
         <nav>
             <div class="logo">
-                <h3>R&G Construcciones</h3>
+                <h3 class="logo-text">
+                    <span class="logo-rg">R&G</span> Construcciones
+                </h3>
             </div>
             <div class="menu">
                 <a href="#hero">Inicio</a>
@@ -169,30 +172,33 @@
     <section class="clientes fade-in seccion-separador" id="clientes">
         <h2 class="section-title">Empresas que han confiado en nosotros</h2>
 
-        <div class="clientes-logos">
-            <div class="logo-box card-animada">
-                <img src="{% static 'img/clientes/oxxo.png' %}" alt="Oxxo">
+        <div class="clientes-slider">
+            <div class="clientes-track">
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/oxxo.png' %}" alt="Oxxo">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/bupa.png' %}" alt="Bupa">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/bci.png' %}" alt="BCI">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/banco.png' %}" alt="Banco de Chile">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/araucana.png' %}" alt="Araucana">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/puma.png' %}" alt="Puma">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/nike.png' %}" alt="Nike">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/io.png' %}" alt="IO">
+                </div>
             </div>
-            <div class="logo-box card-animada">
-                <img src="{% static 'img/clientes/bupa.png' %}" alt="Bupa">
-            </div>
-            <div class="logo-box card-animada">
-                <img src="{% static 'img/clientes/bci.png' %}" alt="BCI">
-            </div>
-            <div class="logo-box card-animada">
-                <img src="{% static 'img/clientes/banco.png' %}" alt="Banco de Chile">
-            </div>
-            <div class="logo-box card-animada">Casa Habitación</div>
-            <div class="logo-box card-animada">
-                <img src="{% static 'img/clientes/araucana.png' %}" alt="Araucana">
-            </div>
-            <div class="logo-box card-animada">
-                <img src="{% static 'img/clientes/puma.png' %}" alt="Puma">
-            </div>
-            <div class="logo-box card-animada">
-                <img src="{% static 'img/clientes/nike.png' %}" alt="Nike">
-            </div>
-            <div class="logo-box card-animada">IO</div>
         </div>
     </section>
 
@@ -281,11 +287,19 @@
                 <p>Estamos listos para escucharte, presupuestar y ejecutar con responsabilidad y calidad.</p>
 
                 <div class="contacto-datos">
-                    <p><strong>Email:</strong> contacto@rgconstrucciones.cl</p>
-                    <p><strong>Teléfono:</strong> +56 9 XXXX XXXX</p>
+                    <p><strong>Email:</strong> riospablo030@gmail.com</p>
+                    <p><strong>Teléfono:</strong> +56 9 8965 9688</p>
                 </div>
 
-                <a class="btn" href="mailto:contacto@rgconstrucciones.cl">Enviar Correo</a>
+                <a class="btn" href="mailto:riospablo030@gmail.com">
+                    Enviar Correo
+                </a>
+
+                <a class="btn whatsapp-btn" 
+                    href="https://wa.me/56989659688" 
+                    target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
             </div>
 
             <div class="contacto-img">
@@ -316,8 +330,8 @@
 
             <div>
                 <h4>Contacto</h4>
-                <p>contacto@rgconstrucciones.cl</p>
-                <p>+56 9 XXXX XXXX</p>
+                <p>riospablo030@gmail.com</p>
+                <p>+56 9 8965 9688</p>
             </div>
 
         </div>
