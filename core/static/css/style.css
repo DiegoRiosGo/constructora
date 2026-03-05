@@ -59,6 +59,12 @@ p {
     font-weight: bold;
 }
 
+.btn:hover{
+ background:#cf6d18;
+ transform:translateY(-2px);
+ transition:all 0.25s ease;
+}
+
 /* HEADER */
 
 header {
@@ -204,14 +210,6 @@ nav a:hover {
 }
 
 /* STATS */
-
-.stats {
-    background: white;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
 
 .stat-box {
     background: var(--azul);
@@ -497,6 +495,13 @@ nav a:hover {
  color:white;
  font-size:16px;
  max-width:320px;
+}
+
+.por-que-layout{
+ display:grid;
+ grid-template-columns: 0.9fr 1.1fr;
+ gap:60px;
+ align-items:center;
 }
 
 /* tarjetas */
