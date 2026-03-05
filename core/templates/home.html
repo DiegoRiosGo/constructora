@@ -96,22 +96,22 @@
 
             <div class="stats-grid">
                 <div class="stat-box card-animada">
-                    <h3>+30</h3>
+                    <h3 class="counter" data-target="30">0</h3>
                     <p>Años de Experiencia</p>
                 </div>
 
                 <div class="stat-box card-animada">
-                    <h3>+200</h3>
+                    <h3 class="counter" data-target="200">0</h3>
                     <p>Proyectos ejecutados</p>
                 </div>
 
                 <div class="stat-box card-animada">
-                    <h3>100%</h3>
+                    <h3 class="counter" data-target="200">0</h3>
                     <p>Equipo técnico profesional</p>
                 </div>
 
                 <div class="stat-box card-animada">
-                    <h3>100%</h3>
+                    <h3 class="counter" data-target="100">0</h3>
                     <p>Cobertura nacional</p>
                 </div>
             </div>
@@ -187,6 +187,35 @@
                     <img src="{% static 'img/clientes/banco.png' %}" alt="Banco de Chile">
                 </div>
                 <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/oxxo.png' %}" alt="Oxxo">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/bupa.png' %}" alt="Bupa">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/bci.png' %}" alt="BCI">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/banco.png' %}" alt="Banco de Chile">
+                </div>
+            </div>
+        </div>
+
+        <div class="clientes-slider reverse">
+            <div class="clientes-track">
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/araucana.png' %}" alt="Araucana">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/puma.png' %}" alt="Puma">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/nike.png' %}" alt="Nike">
+                </div>
+                <div class="logo-box card-animada">
+                    <img src="{% static 'img/clientes/io.png' %}" alt="IO">
+                </div>
+                <div class="logo-box card-animada">
                     <img src="{% static 'img/clientes/araucana.png' %}" alt="Araucana">
                 </div>
                 <div class="logo-box card-animada">
@@ -200,6 +229,7 @@
                 </div>
             </div>
         </div>
+
     </section>
 
     <!-- GALERÍA DE PROYECTOS -->
@@ -364,5 +394,37 @@
             appearOnScroll.observe(fader);
         });
     </script>
+
+    <script>
+        const counters = document.querySelectorAll('.counter');
+
+        const speed = 200;
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+
+                const increment = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(updateCount, 15);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                if(entries[0].isIntersecting){
+                    updateCount();
+                    observer.disconnect();
+                }
+            });
+
+            observer.observe(counter);
+        });
+    </script>
+
 </body>
 </html>

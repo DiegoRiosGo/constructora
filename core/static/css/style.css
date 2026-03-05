@@ -94,7 +94,7 @@ nav a:hover {
 
 .hero {
     background: 
-        linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)),
+        linear-gradient(rgba(230,126,34,0.75), rgba(230,126,34,0.75)),
         url("/static/img/clientes/hero-bg.jpg");
     background-size: cover;
     background-position: center;
@@ -261,24 +261,24 @@ nav a:hover {
 
 .clientes-slider {
     overflow: hidden;
-    position: relative;
-    margin-top: 50px;
+    margin-top: 40px;
+}
+
+.clientes-slider.reverse .clientes-track {
+    animation-direction: reverse;
 }
 
 .clientes-track {
     display: flex;
-    gap: 40px;
-    animation: scrollLogos 25s linear infinite;
+    gap: 60px;
+    animation: scrollLogos 35s linear infinite;
 }
 
 @keyframes scrollLogos {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
+
 
 .logo-text {
     font-weight: 800;
@@ -291,21 +291,18 @@ nav a:hover {
 }
 
 .logo-box {
+    min-width: 220px;
+    height: 150px;
     background: white;
-    padding: 30px;
-    border-radius: 8px;
-    border-left: 5px solid var(--naranja);
-
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 120px; /* Altura fija uniforme */
+    border-left: 6px solid var(--naranja);
 }
 
 .logo-box img {
-    max-height: 60px; /* Todas las imágenes mismas proporciones */
-    max-width: 100%;
-    object-fit: contain;
+    max-height: 90px;
 }
 
 /* PROYECTOS */
@@ -333,13 +330,22 @@ nav a:hover {
 /* POR QUE */
 
 #por-que {
+    background: var(--gris-claro);
+    padding: 120px 10%;
+}
+
+#por-que .beneficios-grid {
     background: 
-        linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.9)),
+        linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)),
         url("/static/img/clientes/por-que-bg.jpg");
     background-size: cover;
     background-position: center;
-    padding: 100px 10%;
-    color: white;
+    padding: 70px;
+    border-radius: 20px;
+}
+
+#por-que .beneficio-card {
+    background: rgba(255,255,255,0.95);
 }
 
 #por-que .section-title {
