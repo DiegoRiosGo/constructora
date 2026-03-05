@@ -449,19 +449,9 @@ nav a:hover {
 
 /* POR QUE */
 
-#por-que {
+#por-que{
     background: var(--gris-claro);
-    padding: 120px 10%;
-}
-
-#por-que .beneficios-grid {
-    background: 
-        linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)),
-        url("/static/img/clientes/por-que-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 70px;
-    border-radius: 20px;
+    padding:120px 10%;
 }
 
 #por-que .beneficio-card {
@@ -472,64 +462,68 @@ nav a:hover {
     color: var(--naranja)
 }
 
-/* columna titulo */
+/* TITULO */
 .por-que-titulo h2{
- color:white;
- font-size:38px;
- line-height:1.2;
- margin-bottom:20px;
+    color:white;
+    font-size:38px;
+    line-height:1.2;
+    margin-bottom:20px;
 }
 
-/* línea elegante debajo del título */
+/* linea elegante */
 .por-que-titulo h2::after{
- content: "";
- display: block;
- width: 80px;
- height: 4px;
- background: var(--naranja);
- margin: 15px auto 0;
- border-radius: 2px;
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:var(--naranja);
+    margin-top:15px;
+    border-radius:2px;
 }
 
 .por-que-titulo p{
- color:white;
- font-size:16px;
- max-width:320px;
+    color:white;
+    font-size:16px;
+    max-width:350px;
 }
 
+
+/* fondo elegante */
 .por-que-layout{
- display:grid;
- grid-template-columns: 0.9fr 1.1fr;
- gap:60px;
- align-items:center;
+    background:
+    linear-gradient(rgba(0,51,102,0.85), rgba(0,51,102,0.85)),
+    url("/static/img/clientes/por-que-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    padding:70px;
+    border-radius:20px;
+
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap:60px;
+    align-items:center;
 }
 
-/* tarjetas */
+/* GRID BENEFICIOS */
 .beneficios-grid{
- display:grid;
- grid-template-columns: repeat(2,1fr);
- gap:25px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:25px;
 }
 
-/*
-.beneficios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
-    margin-top: 50px;
-}
-*/
-
-.beneficio-card {
-    background: #f8faff;
-    padding: 30px;
-    border-radius: 10px;
-    border-left: 5px solid var(--naranja);
+/* TARJETAS */
+.beneficio-card{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    border-left:5px solid var(--naranja);
 }
 
-.beneficio-card h3 {
-    color: var(--azul);
-    margin-bottom: 10px;
+.beneficio-card h3{
+    color:var(--azul);
+    margin-bottom:10px;
 }
 
 /* CONTACTO */
