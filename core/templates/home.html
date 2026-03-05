@@ -96,22 +96,22 @@
 
             <div class="stats-grid">
                 <div class="stat-box card-animada">
-                    <h3 class="counter" data-target="30">0</h3>
+                    <h3 class="counter" data-target="30" data-suffix="+">0</h3>
                     <p>Años de Experiencia</p>
                 </div>
 
                 <div class="stat-box card-animada">
-                    <h3 class="counter" data-target="200">0</h3>
+                    <h3 class="counter" data-target="200" data-suffix="+">0</h3>
                     <p>Proyectos ejecutados</p>
                 </div>
 
                 <div class="stat-box card-animada">
-                    <h3 class="counter" data-target="200">0</h3>
+                    <h3 class="counter" data-target="200" data-suffix="%">0</h3>
                     <p>Equipo técnico profesional</p>
                 </div>
 
                 <div class="stat-box card-animada">
-                    <h3 class="counter" data-target="100">0</h3>
+                    <h3 class="counter" data-target="100" data-suffix="%">0</h3>
                     <p>Cobertura nacional</p>
                 </div>
             </div>
@@ -239,12 +239,30 @@
     <div class="proyectos-grid">
 
         <div class="proyecto-card">
-            <h3>Local Comercial Retail</h3>
-            <p><strong>Tipo:</strong> Local Comercial</p>
-            <p><strong>Ubicación:</strong> Santiago Centro</p>
-            <p><strong>Año:</strong> 2022</p>
-            <p>Remodelación integral y habilitación técnica del espacio.</p>
-            <p><em>Ejecución técnica y constructiva del proyecto.</em></p>
+            <div class="proyecto-slider">
+
+                <div class="proyecto-images">
+
+                <img src="{% static 'img/proyectos/proyecto1-1.jpg' %}">
+                <img src="{% static 'img/proyectos/proyecto1-2.jpg' %}">
+
+                </div>
+
+                <div class="proyecto-overlay">
+                <h3>Local Comercial Retail</h3>
+                </div>
+
+            </div>
+
+            <div class="proyecto-info">
+
+                <p><strong>Tipo:</strong> Local Comercial</p>
+                <p><strong>Ubicación:</strong> Santiago Centro</p>
+                <p><strong>Año:</strong> 2022</p>
+                <p>Remodelación integral y habilitación técnica del espacio.</p>
+                <p><em>Ejecución técnica y constructiva del proyecto.</em></p>
+
+            </div>
         </div>
     
         <div class="proyecto-card">
@@ -279,9 +297,9 @@
 
     <!-- POR QUÉ ELEGIRNOS -->
     <section id="por-que" class="fade-in seccion-separador">
-        <h2 class="section-title">¿Por qué elegir R&G Construcciones?</h2>
-
+        
         <div class="beneficios-grid">
+            <h2 class="section-title">¿Por qué elegir R&G Construcciones?</h2>
 
             <div class="beneficio-card card-animada">
                 <h3>Experiencia Consolidada</h3>
@@ -398,31 +416,69 @@
     <script>
         const counters = document.querySelectorAll('.counter');
 
-        const speed = 200;
+        const duration = 2000; // duración total (2 segundos)
 
         counters.forEach(counter => {
-            const updateCount = () => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
 
-                const increment = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(updateCount, 15);
-                } else {
-                    counter.innerText = target;
-                }
-            };
+            const target = +counter.getAttribute('data-target');
+            const suffix = counter.getAttribute('data-suffix') || "";
 
             const observer = new IntersectionObserver(entries => {
+
                 if(entries[0].isIntersecting){
-                    updateCount();
+
+                    let start = 0;
+                    const startTime = performance.now();
+
+                    function updateCounter(currentTime){
+
+                        const elapsed = currentTime - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+
+                        const value = Math.floor(progress * target);
+
+                        counter.innerText = value + suffix;
+
+                        if(progress < 1){
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target + suffix;
+                        }
+                    }
+
+                    requestAnimationFrame(updateCounter);
                     observer.disconnect();
                 }
+
             });
 
             observer.observe(counter);
+
+        });
+    </script>
+
+    <script>
+        const sliders = document.querySelectorAll(".proyecto-slider");
+
+        sliders.forEach(slider => {
+
+        const images = slider.querySelector(".proyecto-images");
+        const total = images.children.length;
+
+        let index = 0;
+
+        setInterval(()=>{
+
+        index++;
+
+        if(index >= total){
+        index = 0;
+        }
+
+        images.style.transform = `translateX(-${index*100}%)`;
+
+        },3500);
+
         });
     </script>
 
