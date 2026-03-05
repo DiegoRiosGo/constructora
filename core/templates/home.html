@@ -35,7 +35,7 @@
                 <a href="#clientes">Clientes</a>
                 <a href="#galeria">Galería</a>
                 <a href="#por-que">Por qué elegirnos</a>
-                <a href="#contacto" class="menu-btn">Cotizar</a>
+                <a href="#contacto">Contacto</a>
             </div>
         </nav>
     </header>
@@ -89,7 +89,7 @@
 
             <!-- COLUMNA DERECHA (IMAGEN) -->
             <div class="sobre-img">
-                <img src="{% static 'img/clientes/sobre.jpg' %}" alt="Equipo R&G Construcciones" loading="lazy">
+                <img src="{% static 'img/clientes/sobre.jpg' %}" alt="Equipo R&G Construcciones">
             </div>
 
         </div>
@@ -112,7 +112,7 @@
                 </div>
 
                 <div class="stat-box card-animada">
-                    <h3 class="counter" data-target="200" data-suffix="%">0</h3>
+                    <h3 class="counter" data-target="100" data-suffix="%">0</h3>
                     <p>Equipo técnico profesional</p>
                 </div>
 
@@ -253,8 +253,8 @@
 
                 <div class="proyecto-images">
 
-                <img src="{% static 'img/proyectos/proyecto1-1.jpg' %}">
-                <img src="{% static 'img/proyectos/proyecto1-2.jpg' %}">
+                    <img src="{% static 'img/proyectos/proyecto1-1.jpg' %}">
+                    <img src="{% static 'img/proyectos/proyecto1-2.jpg' %}">
 
                 </div>
 
@@ -307,30 +307,36 @@
 
     <!-- POR QUÉ ELEGIRNOS -->
     <section id="por-que" class="fade-in seccion-separador">
-        
-        <div class="beneficios-grid">
-            <h2 class="section-title">¿Por qué elegir R&G Construcciones?</h2>
 
-            <div class="beneficio-card card-animada">
-                <h3>Experiencia Consolidada</h3>
-                <p>Más de 30 años ejecutando proyectos de alto estándar.</p>
+        <div class="por-que-layout">
+            <div class="por-que-titulo">
+                <h2>¿Por qué elegir<br>R&G Construcciones?</h2>
+                <p>Experiencia, gestión técnica y compromiso real en cada proyecto ejecutado.</p>
             </div>
 
-            <div class="beneficio-card card-animada">
-                <h3>Gestión Profesional</h3>
-                <p>Supervisión técnica y control en cada etapa.</p>
-            </div>
+            <div class="beneficios-grid">
 
-            <div class="beneficio-card card-animada">
-                <h3>Compromiso en Plazos</h3>
-                <p>Cumplimiento real y responsable.</p>
-            </div>
+                <div class="beneficio-card card-animada">
+                    <h3>Experiencia Consolidada</h3>
+                    <p>Más de 30 años ejecutando proyectos de alto estándar.</p>
+                </div>
 
-            <div class="beneficio-card card-animada">
-                <h3>Normativa y Seguridad</h3>
-                <p>Trabajo bajo estándares técnicos vigentes.</p>
-            </div>
+                <div class="beneficio-card card-animada">
+                    <h3>Gestión Profesional</h3>
+                    <p>Supervisión técnica y control en cada etapa.</p>
+                </div>
 
+                <div class="beneficio-card card-animada">
+                    <h3>Compromiso en Plazos</h3>
+                    <p>Cumplimiento real y responsable.</p>
+                </div>
+
+                <div class="beneficio-card card-animada">
+                    <h3>Normativa y Seguridad</h3>
+                    <p>Trabajo bajo estándares técnicos vigentes.</p>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -496,21 +502,6 @@
 
         });
     </script>
-    
-    <script>
-        const header = document.querySelector("header");
-
-        window.addEventListener("scroll", () => {
-
-            if(window.scrollY > 80){
-                header.classList.add("scrolled");
-            } else {
-                header.classList.remove("scrolled");
-            }
-
-        });
-    </script>
-    
 
 </body>
 </html>

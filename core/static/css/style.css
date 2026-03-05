@@ -115,17 +115,30 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 48px;
-    color: rgba(230,126,34);
-    margin-bottom: 20px;
-    font-weight: 800;
+ font-size: 50px;
+ color: #ffffff;
+ margin-bottom: 20px;
+ font-weight: 800;
+ position: relative;
+ display: inline-block;
 }
 
-.hero h2 {
-    font-size: 24px;
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 500;
+/* línea elegante debajo del título */
+.hero h1::after{
+ content: "";
+ display: block;
+ width: 80px;
+ height: 4px;
+ background: var(--naranja);
+ margin: 15px auto 0;
+ border-radius: 2px;
+}
+
+.hero h2{
+ font-size: 24px;
+ color: rgba(255,255,255,0.85);
+ margin-bottom: 25px;
+ font-weight: 500;
 }
 
 .hero p {
@@ -461,12 +474,43 @@ nav a:hover {
     color: var(--naranja)
 }
 
+/* LAYOUT POR QUE */
+.por-que-layout{
+ display:grid;
+ grid-template-columns: 0.8fr 1.2fr;
+ gap:60px;
+ align-items:center;
+}
+
+/* columna titulo */
+.por-que-titulo h2{
+ color:var(--naranja);
+ font-size:38px;
+ line-height:1.2;
+ margin-bottom:20px;
+}
+
+.por-que-titulo p{
+ color:white;
+ font-size:16px;
+ max-width:320px;
+}
+
+/* tarjetas */
+.beneficios-grid{
+ display:grid;
+ grid-template-columns: repeat(2,1fr);
+ gap:25px;
+}
+
+/*
 .beneficios-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 25px;
     margin-top: 50px;
 }
+*/
 
 .beneficio-card {
     background: #f8faff;
@@ -762,12 +806,6 @@ nav a:hover {
 
 /*pruebas*/
 
-.menu-btn{
-    background:var(--naranja);
-    padding:8px 16px;
-    border-radius:5px;
-}
-
 html{
     scroll-behavior:smooth;
 }
@@ -776,15 +814,3 @@ html{
     background:rgba(0,0,0,0.75);
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-header.scrolled {
-    background: var(--azul);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-}
