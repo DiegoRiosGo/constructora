@@ -6,6 +6,12 @@
     <title>R&G Construcciones Ltda.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta name="description" content="R&G Construcciones Ltda. empresa chilena con más de 30 años de experiencia en obras civiles, remodelaciones y proyectos habitacionales y comerciales.">
+
+    <meta name="keywords" content="constructora chile, obras civiles, remodelaciones, empresa constructora santiago, obras menores chile">
+
+    <meta name="author" content="R&G Construcciones Ltda">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- CSS externo -->
@@ -29,7 +35,7 @@
                 <a href="#clientes">Clientes</a>
                 <a href="#galeria">Galería</a>
                 <a href="#por-que">Por qué elegirnos</a>
-                <a href="#contacto">Contacto</a>
+                <a href="#contacto" class="menu-btn">Cotizar</a>
             </div>
         </nav>
     </header>
@@ -39,7 +45,7 @@
     <section class="hero" id="hero">
         <div class="hero-box">
             <h1>Construimos con experiencia y compromiso.</h1>
-            <h2>Más de 30 años ejecutando obras habitacionales y comerciales con profesionalismo.</h2>
+            <h2>Más de 30 años ejecutando proyectos con profesionalismo para empresas y clientes particulares en Chile.</h2>
             <p>R&G Construcciones Ltda. transforma proyectos en espacios reales con calidad, cumplimiento y responsabilidad.</p>
             <a href="#contacto" class="btn hero-btn">Solicitar Cotización</a>
         </div>
@@ -83,7 +89,7 @@
 
             <!-- COLUMNA DERECHA (IMAGEN) -->
             <div class="sobre-img">
-                <img src="{% static 'img/clientes/sobre.jpg' %}" alt="Equipo R&G Construcciones">
+                <img src="{% static 'img/clientes/sobre.jpg' %}" alt="Equipo R&G Construcciones" loading="lazy">
             </div>
 
         </div>
@@ -171,6 +177,10 @@
     <!-- CLIENTES IMPORTANTES -->
     <section class="clientes fade-in seccion-separador" id="clientes">
         <h2 class="section-title">Empresas que han confiado en nosotros</h2>
+        
+        <p class="clientes-subtitle">
+            Hemos participado en proyectos para empresas líderes del país.
+        </p>
 
         <div class="clientes-slider">
             <div class="clientes-track">
@@ -234,7 +244,7 @@
 
     <!-- GALERÍA DE PROYECTOS -->
     <section id="galeria" class="fade-in seccion-separador">
-    <h2 class="section-title">Proyectos Destacados</h2>
+    <h2 class="section-title">Proyectos Ejecutados</h2>
     
     <div class="proyectos-grid">
 
@@ -389,6 +399,11 @@
         </div>
     </footer>
     
+    <a href="https://wa.me/56989659688" 
+        class="whatsapp-float" 
+        target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
     <script>
         const faders = document.querySelectorAll('.fade-in');
@@ -481,6 +496,21 @@
 
         });
     </script>
+    
+    <script>
+        const header = document.querySelector("header");
+
+        window.addEventListener("scroll", () => {
+
+            if(window.scrollY > 80){
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+
+        });
+    </script>
+    
 
 </body>
 </html>

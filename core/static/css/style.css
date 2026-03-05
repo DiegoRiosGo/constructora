@@ -312,6 +312,13 @@ nav a:hover {
     margin-top: 50px;
 }
 
+.clientes-subtitle{
+    text-align:center;
+    margin-bottom:30px;
+    color:var(--gris);
+    font-size:18px;
+}
+
 .clientes-slider {
     overflow: hidden;
     margin-top: 40px;
@@ -729,4 +736,55 @@ nav a:hover {
 
 .whatsapp-btn:hover {
     background: #1ebe5d;
+}
+
+.whatsapp-float{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    background:#25D366;
+    color:white;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    z-index:999;
+    transition:all 0.3s ease;
+}
+
+.whatsapp-float:hover{
+    transform:scale(1.1);
+}
+
+/*pruebas*/
+
+.menu-btn{
+    background:var(--naranja);
+    padding:8px 16px;
+    border-radius:5px;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+.proyecto-card:hover .proyecto-overlay{
+    background:rgba(0,0,0,0.75);
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.scrolled {
+    background: var(--azul);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
 }
