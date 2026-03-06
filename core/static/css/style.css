@@ -568,6 +568,22 @@ nav a:hover {
     width: 100%;
     border-radius: 12px;
 }
+
+.contacto-botones{
+display:flex;
+gap:15px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.contacto-email{
+background:var(--azul);
+}
+
+.contacto-email:hover{
+background:#00264d;
+}
+
 /* FOOTER */
 
 .footer {
