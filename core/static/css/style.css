@@ -570,10 +570,12 @@ nav a:hover {
 }
 
 .contacto-botones{
-display:flex;
-gap:15px;
-margin-top:20px;
-flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
+    flex-wrap:wrap;
 }
 
 .contacto-email{
@@ -832,3 +834,9 @@ html{
     background:rgba(0,0,0,0.75);
 }
 
+.proyecto-overlay::after{
+    content:"Ver detalles";
+    display:block;
+    font-size:12px;
+    opacity:0.8;
+}
