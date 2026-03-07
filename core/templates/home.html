@@ -249,7 +249,7 @@
     <div class="proyectos-grid">
 
         <div class="proyecto-card">
-            <div class="proyecto-slider">
+            <div class="proyecto-slider proyecto-click">
 
                 <div class="proyecto-images">
 
@@ -259,20 +259,20 @@
                 </div>
 
                 <div class="proyecto-overlay">
-                <h3>Local Comercial Retail</h3>
+                    <h3>Local Comercial Retail</h3>
                 </div>
 
-            </div>
+                </div>
 
-            <div class="proyecto-info">
+                <div class="proyecto-info oculto">
 
-                <p><strong>Tipo:</strong> Local Comercial</p>
-                <p><strong>Ubicación:</strong> Santiago Centro</p>
-                <p><strong>Año:</strong> 2022</p>
-                <p>Remodelación integral y habilitación técnica del espacio.</p>
-                <p><em>Ejecución técnica y constructiva del proyecto.</em></p>
+                    <p><strong>Tipo:</strong> Local Comercial</p>
+                    <p><strong>Ubicación:</strong> Santiago Centro</p>
+                    <p><strong>Año:</strong> 2022</p>
+                    <p>Remodelación integral y habilitación técnica del espacio.</p>
+                    <p><em>Ejecución técnica y constructiva del proyecto.</em></p>
 
-            </div>
+                </div>
         </div>
     
         <div class="proyecto-card">
@@ -419,6 +419,20 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <div class="proyecto-modal" id="proyectoModal">
+
+        <div class="modal-contenido">
+
+            <span class="modal-cerrar">&times;</span>
+
+            <img id="modalImagen">
+
+            <div class="modal-info" id="modalInfo"></div>
+
+        </div>
+
+    </div>
+
     <script>
         const faders = document.querySelectorAll('.fade-in');
         
@@ -511,5 +525,45 @@
         });
     </script>
 
+    <script>
+        const modal = document.getElementById("proyectoModal");
+        const modalImg = document.getElementById("modalImagen");
+        const modalInfo = document.getElementById("modalInfo");
+        const cerrar = document.querySelector(".modal-cerrar");
+
+        const proyectos = document.querySelectorAll(".proyecto-click");
+
+        proyectos.forEach(proyecto => {
+
+            proyecto.addEventListener("click", ()=>{
+
+                const card = proyecto.closest(".proyecto-card");
+
+                const img = proyecto.querySelector("img").src;
+                const info = card.querySelector(".proyecto-info").innerHTML;
+
+                modalImg.src = img;
+                modalInfo.innerHTML = info;
+
+                modal.classList.add("activo");
+
+            });
+
+        });
+
+        cerrar.addEventListener("click", ()=>{
+
+            modal.classList.remove("activo");
+
+        });
+
+        modal.addEventListener("click", (e)=>{
+
+            if(e.target === modal){
+                modal.classList.remove("activo");
+            }
+
+        });
+    </script>
 </body>
 </html>
