@@ -421,11 +421,19 @@
 
     <div class="proyecto-modal" id="proyectoModal">
 
-        <div class="modal-contenido">
+        <div class="modal-card">
 
             <span class="modal-cerrar">&times;</span>
 
-            <img id="modalImagen">
+            <div class="modal-slider">
+
+                <button class="modal-prev">&#10094;</button>
+
+                <div class="modal-images" id="modalImages"></div>
+
+                <button class="modal-next">&#10095;</button>
+
+            </div>
 
             <div class="modal-info" id="modalInfo"></div>
 
@@ -527,9 +535,16 @@
 
     <script>
         const modal = document.getElementById("proyectoModal");
-        const modalImg = document.getElementById("modalImagen");
+        const modalImages = document.getElementById("modalImages");
         const modalInfo = document.getElementById("modalInfo");
         const cerrar = document.querySelector(".modal-cerrar");
+
+        const prev = document.querySelector(".modal-prev");
+        const next = document.querySelector(".modal-next");
+
+        let index = 0;
+        let total = 0;
+        let sliderInterval;
 
         const proyectos = document.querySelectorAll(".proyecto-click");
 
@@ -539,28 +554,97 @@
 
                 const card = proyecto.closest(".proyecto-card");
 
-                const img = proyecto.querySelector("img").src;
-                const info = card.querySelector(".proyecto-info").innerHTML;
+                const images = proyecto.querySelectorAll("img");
 
-                modalImg.src = img;
+                modalImages.innerHTML = "";
+
+                images.forEach(img => {
+
+                    const clone = document.createElement("img");
+                    clone.src = img.src;
+
+                    modalImages.appendChild(clone);
+
+                });
+
+                total = images.length;
+                index = 0;
+
+                modalImages.style.transform = `translateX(0%)`;
+
+                const info = card.querySelector(".proyecto-info").innerHTML;
                 modalInfo.innerHTML = info;
 
                 modal.classList.add("activo");
+
+                startSlider();
 
             });
 
         });
 
-        cerrar.addEventListener("click", ()=>{
+        /* slider automatico */
 
-            modal.classList.remove("activo");
+        function startSlider(){
+
+            clearInterval(sliderInterval);
+
+            sliderInterval = setInterval(()=>{
+
+                index++;
+
+                if(index >= total){
+                    index = 0;
+                }
+
+                modalImages.style.transform = `translateX(-${index*100}%)`;
+
+            },4000);
+
+        }
+
+        /* flechas */
+
+        next.addEventListener("click", ()=>{
+
+            index++;
+
+            if(index >= total){
+                index = 0;
+            }
+
+            modalImages.style.transform = `translateX(-${index*100}%)`;
 
         });
 
-        modal.addEventListener("click", (e)=>{
+        prev.addEventListener("click", ()=>{
+
+            index--;
+
+            if(index < 0){
+                index = total - 1;
+            }
+
+            modalImages.style.transform = `translateX(-${index*100}%)`;
+
+        });
+
+        /* cerrar */
+
+        cerrar.addEventListener("click", ()=>{
+
+            modal.classList.remove("activo");
+            clearInterval(sliderInterval);
+
+        });
+
+        modal.addEventListener("click",(e)=>{
 
             if(e.target === modal){
+
                 modal.classList.remove("activo");
+                clearInterval(sliderInterval);
+
             }
 
         });
