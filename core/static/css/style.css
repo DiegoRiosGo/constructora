@@ -85,7 +85,7 @@ nav{
 
 .menu{
     position:absolute;
-    left:50%;
+    left:55%;
     transform:translateX(-50%);
     display:flex;
     gap:25px;
@@ -1061,9 +1061,30 @@ html{
 @media (max-width: 900px){
 
 .menu{
-    position:static;
-    transform:none;
-    margin-left:auto;
+position:fixed;
+top:70px;
+right:-100%;
+width:220px;
+height:100vh;
+background:var(--azul);
+flex-direction:column;
+padding:40px 25px;
+gap:20px;
+transition:all 0.35s ease;
+}
+
+.menu.activo{
+right:0;
+}
+
+.menu a{
+margin-left:0;
+font-size:16px;
+}
+
+.hamburguesa{
+display:flex;
+margin-left:auto;
 }
 
 nav{
@@ -1071,15 +1092,13 @@ nav{
     gap:10px;
 }
 
-.menu a{
-    font-size:14px;
-}
-
 .logo-text{
     font-size:18px;
 }
 
 }
+
+
 
 /*Hero responsive*/
 @media (max-width: 768px){
@@ -1155,19 +1174,33 @@ nav{
 }
 
 /*Por qué elegirnos responsive*/
-@media (max-width: 900px){
+@media (max-width:900px){
 
 .por-que-layout{
-    grid-template-columns:1fr;
-    padding:40px;
+grid-template-columns:1fr;
+padding:40px 25px;
+gap:40px;
+text-align:center;
+}
+
+.por-que-titulo h2{
+font-size:28px;
+}
+
+.por-que-titulo h2::after{
+margin:15px auto 0;
+}
+
+.por-que-titulo p{
+max-width:100%;
 }
 
 .beneficios-grid{
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
 }
 
-.por-que-titulo{
-    text-align:center;
+.beneficio-card{
+padding:25px;
 }
 
 }
@@ -1186,10 +1219,31 @@ nav{
 }
 
 /*Proyectos responsive*/
-@media (max-width: 768px){
+@media (max-width:768px){
+
+.proyecto-card{
+padding:18px;
+}
+
+.proyecto-slider{
+height:200px;
+}
+
+.proyecto-overlay h3{
+font-size:16px;
+}
+
+.proyecto-info{
+font-size:14px;
+}
+
+}
+
+@media (max-width:768px){
 
 .proyectos-grid{
-    grid-template-columns:1fr;
+grid-template-columns:1fr;
+gap:20px;
 }
 
 }
@@ -1226,6 +1280,41 @@ section{
 .modal-next{
     font-size:20px;
     padding:8px 12px;
+}
+
+}
+
+.hamburguesa{
+display:none;
+flex-direction:column;
+cursor:pointer;
+gap:5px;
+}
+
+.hamburguesa span{
+width:28px;
+height:3px;
+background:white;
+display:block;
+border-radius:3px;
+}
+
+@media (max-width:768px){
+
+.footer-grid{
+text-align:center;
+}
+
+.footer-logo{
+align-items:center;
+}
+
+.footer-logo img{
+margin:auto;
+}
+
+.footer ul{
+padding:0;
 }
 
 }

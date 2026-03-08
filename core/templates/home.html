@@ -41,6 +41,13 @@
                 <a href="#galeria">Proyectos</a>
                 <a href="#contacto">Contacto</a>
             </div>
+
+            <div class="hamburguesa">
+            <span></span>
+            <span></span>
+            <span></span>
+            </div>
+
         </nav>
     </header>
 
@@ -698,6 +705,14 @@
 
             }
 
+        });
+    </script>
+    <script>
+        const burger = document.querySelector(".hamburguesa");
+        const menu = document.querySelector(".menu");
+
+        burger.addEventListener("click", () => {
+            menu.classList.toggle("activo");
         });
     </script>
 </body>
