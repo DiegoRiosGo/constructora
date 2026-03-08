@@ -1219,28 +1219,13 @@ padding:25px;
 
 .proyectos-grid{
 grid-template-columns:1fr;
-gap:18px;
-}
-
-.proyecto-card{
-padding:10px;
-border-radius:10px;
 }
 
 .proyecto-slider{
 height:180px;
 }
 
-.proyecto-overlay{
-padding:8px;
 }
-
-.proyecto-overlay h3{
-font-size:14px;
-}
-
-}
-
 
 @media (max-width:768px){
 
