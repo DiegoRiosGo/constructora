@@ -382,6 +382,7 @@ nav a:hover {
 .logo-img{
     height:40px;
     width:auto;
+    border-radius:8px;
 }
 
 .logo-box {
@@ -830,10 +831,12 @@ background:#00264d;
 }
 
 .footer-logo img{
-    height:50px;
+    height:55px;
     margin-bottom:10px;
+    border-radius:10px;
+    background:white;
+    padding:4px;
 }
-
 .footer-nombre{
     font-weight:600;
     margin-bottom:5px;
@@ -1058,9 +1061,7 @@ html{
 /*celular*/
 
 /*Navbar responsive*/
-@media (max-width: 900px){
-
-@media (max-width: 900px){
+@media (max-width:900px){
 
 .menu{
 position:fixed;
@@ -1081,8 +1082,6 @@ transition:right 0.35s ease;
 z-index:1500;
 }
 
-/* cuando se abre */
-
 .menu.activo{
 right:0;
 }
@@ -1101,10 +1100,8 @@ nav{
 flex-wrap:nowrap;
 }
 
-}
-
 .logo-text{
-    font-size:18px;
+font-size:18px;
 }
 
 }
@@ -1234,24 +1231,24 @@ padding:25px;
 
 .proyectos-grid{
 grid-template-columns:1fr;
-gap:20px;
+gap:18px;
 }
 
 .proyecto-card{
-padding:14px;
+padding:12px;
 border-radius:10px;
 }
 
 .proyecto-slider{
-height:180px;
+height:170px;
 }
 
 .proyecto-overlay{
-padding:10px;
+padding:8px;
 }
 
 .proyecto-overlay h3{
-font-size:15px;
+font-size:14px;
 }
 
 .proyecto-info{
@@ -1311,13 +1308,13 @@ display:none;
 flex-direction:column;
 cursor:pointer;
 gap:5px;
+z-index:2000;
 }
 
 .hamburguesa span{
 width:28px;
 height:3px;
 background:white;
-display:block;
 border-radius:3px;
 }
 
@@ -1346,12 +1343,12 @@ padding:0;
 @media (max-width:768px){
 
 .modal-card{
-width:95%;
-max-width:95%;
+width:92%;
+max-width:360px;
 }
 
 .modal-slider{
-padding:15px;
+padding:12px;
 }
 
 .modal-images img{
@@ -1361,32 +1358,32 @@ height:200px;
 .modal-prev,
 .modal-next{
 font-size:18px;
-padding:6px 10px;
+padding:6px 8px;
 }
 
 .modal-prev{
-left:10px;
+left:8px;
 }
 
 .modal-next{
-right:10px;
+right:8px;
 }
 
 .modal-info{
-padding:18px 20px;
+padding:16px;
 }
 
 .modal-info h3{
-font-size:18px;
+font-size:16px;
 }
 
 .modal-info p{
-font-size:14px;
+font-size:13px;
 }
 
 .modal-cerrar{
-top:10px;
-right:10px;
+top:8px;
+right:8px;
 }
 
 }
