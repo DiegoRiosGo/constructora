@@ -398,7 +398,7 @@
 
             <div class="footer-logo">
 
-                <img src="{% static 'img/logo.png' %}" alt="R&G Construcciones Logo">
+                <img src="{% static 'img/logo2.png' %}" alt="R&G Construcciones Logo">
 
                 <p class="footer-nombre">R&G Construcciones Ltda.</p>
 
@@ -707,13 +707,22 @@
 
         });
     </script>
+
     <script>
         const burger = document.querySelector(".hamburguesa");
         const menu = document.querySelector(".menu");
+        const links = document.querySelectorAll(".menu a");
 
         burger.addEventListener("click", () => {
             menu.classList.toggle("activo");
         });
+
+        links.forEach(link=>{
+            link.addEventListener("click", ()=>{
+                menu.classList.remove("activo");
+            });
+        });
     </script>
+    
 </body>
 </html>
