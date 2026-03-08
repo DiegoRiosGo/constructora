@@ -73,13 +73,22 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    border-bottom: 4px solid var(--naranja);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 22px 10%; /* más alto */
+nav{
+    display:flex;
+    align-items:center;
+    padding:22px 10%;
+    position:relative;
+}
+
+.menu{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:25px;
 }
 
 nav h3 {
@@ -1043,4 +1052,180 @@ html{
     display:block;
     font-size:12px;
     opacity:0.8;
+}
+
+
+/*celular*/
+
+/*Navbar responsive*/
+@media (max-width: 900px){
+
+.menu{
+    position:static;
+    transform:none;
+    margin-left:auto;
+}
+
+nav{
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.menu a{
+    font-size:14px;
+}
+
+.logo-text{
+    font-size:18px;
+}
+
+}
+
+/*Hero responsive*/
+@media (max-width: 768px){
+
+.hero{
+    padding:120px 6% 50px;
+}
+
+.hero-box{
+    padding:60px 30px;
+}
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero h1::after{
+    width:200px;
+}
+
+.hero h2{
+    font-size:18px;
+}
+
+.hero p{
+    font-size:16px;
+}
+
+}
+
+/*Sobre Nosotros responsive*/
+@media (max-width: 900px){
+
+.sobre-grid{
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+.mision-vision{
+    grid-template-columns:1fr;
+}
+
+}
+
+/*Estadísticas responsive*/
+@media (max-width: 900px){
+
+.stats-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media (max-width: 500px){
+
+.stats-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+/*Servicios responsive*/
+@media (max-width: 900px){
+
+.servicios-secundarios{
+    grid-template-columns:1fr;
+}
+
+.servicio-destacado ul{
+    grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+/*Por qué elegirnos responsive*/
+@media (max-width: 900px){
+
+.por-que-layout{
+    grid-template-columns:1fr;
+    padding:40px;
+}
+
+.beneficios-grid{
+    grid-template-columns:1fr;
+}
+
+.por-que-titulo{
+    text-align:center;
+}
+
+}
+
+/*Contacto responsive*/
+@media (max-width: 900px){
+
+.contacto-grid{
+    grid-template-columns:1fr;
+}
+
+.contacto-info{
+    padding:35px;
+}
+
+}
+
+/*Proyectos responsive*/
+@media (max-width: 768px){
+
+.proyectos-grid{
+    grid-template-columns:1fr;
+}
+
+}
+
+/*padding global responsive*/
+@media (max-width: 768px){
+
+section{
+    padding:60px 6%;
+}
+
+}
+
+@media (max-width: 768px){
+
+.logo-box{
+    min-width:160px;
+    height:120px;
+}
+
+.logo-box img{
+    max-height:70px;
+}
+
+}
+
+@media (max-width: 768px){
+
+.modal-images img{
+    height:220px;
+}
+
+.modal-prev,
+.modal-next{
+    font-size:20px;
+    padding:8px 12px;
+}
+
 }
