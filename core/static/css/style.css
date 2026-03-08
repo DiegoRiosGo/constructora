@@ -133,7 +133,7 @@ nav a:hover {
 .hero h1::after{
  content: "";
  display: block;
- width: 80px;
+ width: 700px;
  height: 4px;
  background: var(--naranja);
  margin: 15px auto 0;
@@ -355,14 +355,24 @@ nav a:hover {
     }
 }
 
-.logo-text {
-    font-weight: 800;
-    font-size: 22px;
-    letter-spacing: 1px;
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
 }
 
-.logo-rg {
-    color: var(--naranja);
+.logo-text{
+    font-size:20px;
+    font-weight:600;
+}
+
+.logo-rg{
+    color:var(--naranja);
+}
+
+.logo-img{
+    height:40px;
+    width:auto;
 }
 
 .logo-box {
@@ -649,7 +659,7 @@ nav a:hover {
 .por-que-titulo h2::after{
     content:"";
     display:block;
-    width:80px;
+    width:200px;
     height:4px;
     background:var(--naranja);
     margin-top:15px;
@@ -804,7 +814,26 @@ background:#00264d;
     color: #aaa;
 }
 
+.footer-logo{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+}
 
+.footer-logo img{
+    height:50px;
+    margin-bottom:10px;
+}
+
+.footer-nombre{
+    font-weight:600;
+    margin-bottom:5px;
+}
+
+.footer-descripcion{
+    font-size:14px;
+    color:#ccc;
+}
 
 
 

@@ -12,6 +12,8 @@
 
     <meta name="author" content="R&G Construcciones Ltda">
 
+    <link rel="icon" type="image/png" href="{% static 'img/logo.png' %}">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- CSS externo -->
@@ -24,17 +26,19 @@
     <header>
         <nav>
             <div class="logo">
+
+                <img src="{% static 'img/logo.png' %}" alt="R&G Construcciones Logo" class="logo-img">
+
                 <h3 class="logo-text">
                     <span class="logo-rg">R&G</span> Construcciones
                 </h3>
+
             </div>
             <div class="menu">
                 <a href="#hero">Inicio</a>
-                <a href="#sobre">Sobre</a>
+                <a href="#sobre">Nosotros</a>
                 <a href="#servicios">Servicios</a>
-                <a href="#clientes">Clientes</a>
-                <a href="#galeria">Galería</a>
-                <a href="#por-que">Por qué elegirnos</a>
+                <a href="#galeria">Proyectos</a>
                 <a href="#contacto">Contacto</a>
             </div>
         </nav>
@@ -385,9 +389,16 @@
     <footer class="footer">
         <div class="footer-grid">
 
-            <div>
-                <h3>R&G Construcciones Ltda.</h3>
-                <p>Más de 30 años construyendo confianza en Chile.</p>
+            <div class="footer-logo">
+
+                <img src="{% static 'img/logo.png' %}" alt="R&G Construcciones Logo">
+
+                <p class="footer-nombre">R&G Construcciones Ltda.</p>
+
+                <p class="footer-descripcion">
+                    Más de 30 años construyendo confianza en Chile.
+                </p>
+
             </div>
 
             <div>
@@ -618,6 +629,8 @@
                 }
 
                 modalImages.style.transform = `translateX(-${index*100}%)`;
+
+                updateDots();
 
             },4000);
 
