@@ -431,6 +431,8 @@
 
                 <div class="modal-images" id="modalImages"></div>
 
+                <div class="modal-dots" id="modalDots"></div>
+
                 <button class="modal-next">&#10095;</button>
 
             </div>
@@ -538,6 +540,7 @@
         const modalImages = document.getElementById("modalImages");
         const modalInfo = document.getElementById("modalInfo");
         const cerrar = document.querySelector(".modal-cerrar");
+        const modalDots = document.getElementById("modalDots");
 
         const prev = document.querySelector(".modal-prev");
         const next = document.querySelector(".modal-next");
@@ -577,11 +580,28 @@
 
                 modal.classList.add("activo");
 
+                modalDots.innerHTML = "";
+
+                images.forEach((img,i)=>{
+
+                    const dot = document.createElement("div");
+                    dot.classList.add("modal-dot");
+
+                    if(i === 0){
+                        dot.classList.add("activo");
+                    }
+
+                    modalDots.appendChild(dot);
+
+                });
+
                 startSlider();
 
             });
 
-        });
+        }); 
+
+        
 
         /* slider automatico */
 
@@ -601,8 +621,24 @@
 
             },4000);
 
+            updateDots();
+
         }
 
+        
+        function updateDots(){
+
+            const dots = document.querySelectorAll(".modal-dot");
+
+            dots.forEach((dot,i)=>{
+                dot.classList.remove("activo");
+
+                if(i === index){
+                    dot.classList.add("activo");
+                }
+            });
+
+        }
         /* flechas */
 
         next.addEventListener("click", ()=>{
@@ -615,6 +651,7 @@
 
             modalImages.style.transform = `translateX(-${index*100}%)`;
 
+            updateDots();
         });
 
         prev.addEventListener("click", ()=>{
@@ -627,6 +664,7 @@
 
             modalImages.style.transform = `translateX(-${index*100}%)`;
 
+            updateDots();
         });
 
         /* cerrar */
