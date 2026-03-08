@@ -1227,15 +1227,6 @@ height:180px;
 
 }
 
-@media (max-width:768px){
-
-.proyectos-grid{
-grid-template-columns:1fr;
-gap:20px;
-}
-
-}
-
 /*padding global responsive*/
 @media (max-width: 768px){
 
