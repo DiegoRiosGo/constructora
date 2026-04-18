@@ -32,8 +32,8 @@ SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://rgconstruye.cl',
-    'https://www.rgconstruye.cl',
+    'www.rgconstruye.cl',
+    'rgconstruye.cl'
 ]
 
 
